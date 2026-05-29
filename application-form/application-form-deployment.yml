@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-form-deployment
+  labels:
+    app: app-form
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-form
+  template:
+    metadata:
+      labels:
+        app: app-form
+    spec:
+      containers:
+        - name: app-form-container
+          image: ammaralshari/app-from:v1
+          ports:
+            - containerPort: 8080
