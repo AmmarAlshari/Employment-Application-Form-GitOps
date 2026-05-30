@@ -26,7 +26,7 @@ metadata:
   name: app-form-service
 spec:
   selector:
-    app.kubernetes.io/name: app-form
+    app: app-form
   ports:
     - protocol: TCP
       port: 4200

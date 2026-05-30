@@ -26,7 +26,7 @@ metadata:
   name: nest-service
 spec:
   selector:
-    app.kubernetes.io/name: nest
+    app: nest
   ports:
     - protocol: TCP
       port: 3000
