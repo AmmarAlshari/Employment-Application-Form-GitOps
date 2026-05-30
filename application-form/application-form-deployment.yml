@@ -25,11 +25,9 @@ kind: Service
 metadata:
   name: app-form-service
 spec:
-  type: NodePort
   selector:
     app.kubernetes.io/name: app-form
   ports:
     - protocol: TCP
       port: 4200
       targetPort: 8080
-      NodePort: 30007

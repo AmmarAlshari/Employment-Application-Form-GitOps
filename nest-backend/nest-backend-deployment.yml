@@ -25,11 +25,9 @@ kind: Service
 metadata:
   name: nest-service
 spec:
-  type: NodePort
   selector:
     app.kubernetes.io/name: nest
   ports:
     - protocol: TCP
       port: 3000
       targetPort: 3000
-      NodePort: 30100
