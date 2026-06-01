@@ -4,10 +4,10 @@ metadata:
   name: nest-deployment
   labels:
     app: nest
-spec:
-  replicas: 1
+spec: 
+  replicas: 1  
   selector:
-    matchLabels:
+    matchLabels: 
       app: nest
   template:
     metadata:
