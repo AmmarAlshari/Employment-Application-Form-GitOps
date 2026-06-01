@@ -4,10 +4,10 @@ metadata:
   name: nest-deployment
   labels:
     app: nest
-spec: 
-  replicas: 1  
+spec:
+  replicas: 1
   selector:
-    matchLabels: 
+    matchLabels:
       app: nest
   template:
     metadata:
@@ -19,6 +19,26 @@ spec:
           image: ammaralshari/nest-backend:v1
           ports:
             - containerPort: 3000
+          env:
+            - name: DB_HOST
+              value: "external-mysql-service"
+            - name: DATABASE_PORT
+              value: "3306"
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: database-secret
+                  key: DB_USER
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: database-secret
+                  key: DB_PASSWORD
+            - name: DB_DATABASE
+              valueFrom:
+                secretKeyRef:
+                  name: database-secret
+                  key: DB_DATABASE
 ---
 apiVersion: v1
 kind: Service
