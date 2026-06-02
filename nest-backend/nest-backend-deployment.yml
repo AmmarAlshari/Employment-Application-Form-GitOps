@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: nest-container
-          image: ammaralshari/nest-backend:v1
+          image: ammaralshari/nest-backend:v2
           ports:
             - containerPort: 3000
           envFrom:

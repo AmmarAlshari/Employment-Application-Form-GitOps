@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: app-form-container
-          image: ammaralshari/app-from:v1
+          image: ammaralshari/app-from:v2
           ports:
             - containerPort: 8080
 ---
