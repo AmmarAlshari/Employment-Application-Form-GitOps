@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: dashboard-container
-          image: ammaralshari/dashboard:v1
+          image: ammaralshari/dashboard:v3
           ports:
             - containerPort: 80
 ---

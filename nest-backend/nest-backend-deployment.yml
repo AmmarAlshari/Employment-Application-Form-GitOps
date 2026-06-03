@@ -23,6 +23,12 @@ spec:
             - configMapRef:
                 name: mysql-config
           env:
+            - name: JTW_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JTW_SECRET
+                  
             - name: DB_USER
               valueFrom:
                 secretKeyRef:
